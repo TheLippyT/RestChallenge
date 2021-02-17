@@ -2,6 +2,7 @@ const baseUrl = 'https://restcountries.eu/rest/v2/name/';
 
 
 function callCountries(){
+    //create object for all headers and do a foreach
     let country = document.getElementById('countryName').value;
     fetch(baseUrl + country)
         .then(response => response.json())
