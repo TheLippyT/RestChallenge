@@ -11,11 +11,14 @@ function callCountries(){
         })
         function appendData(data){
             let container = document.getElementById('displayData');
-                for (let i = 0; i < data.length; i++) {
-                    let div = document.createElement("div");
-                    div.innerHTML = 'name: ' + data[i].name /*+ ' ' + 'capital: ' + data[i].capital*/;
-                    container.appendChild(div);
-                }
+                 for (let i = 0; i < data.length; i++) {
+                    let nameDiv = document.createElement("div");
+                    let capDiv = document.createElement("div");
+                    nameDiv.innerHTML = 'name:'  + data[i].name ;
+                    capDiv.innerHTML = 'capital: ' + data[i].capital;
+                    container.appendChild(nameDiv);
+                    container.appendChild(capDiv);
+             }
         }
 
 }
