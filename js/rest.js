@@ -12,12 +12,20 @@ function callCountries(){
         function appendData(data){
             let container = document.getElementById('displayData');
                  for (let i = 0; i < data.length; i++) {
-                    let nameDiv = document.createElement("div");
-                    let capDiv = document.createElement("div");
-                    nameDiv.innerHTML = 'name:'  + data[i].name ;
-                    capDiv.innerHTML = 'capital: ' + data[i].capital;
-                    container.appendChild(nameDiv);
-                    container.appendChild(capDiv);
+                    const img = document.getElementById('flag');
+                    const cname = document.getElementById('cname');
+                    const ccapital = document.getElementById('ccapital');
+                    const cregion = document.getElementById('cregion');
+                    const csubregion = document.getElementById('csubregion');
+                    const cpopulation = document.getElementById('cpopulation');
+                   
+                    img.src = data[i].flag;
+                    cname.innerHTML = 'Country: ' + data[i].name;
+                    ccapital.innerHTML = 'Capital: ' + data[i].capital;
+                    cregion.innerHTML = 'Region: ' + data[i].region;
+                    csubregion.innerHTML = 'Subregion: ' + data[i].subregion;
+                    cpopulation.innerHTML = 'Population: ' + data[i].population;
+            
              }
         }
 
